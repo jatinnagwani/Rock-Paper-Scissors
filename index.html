@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <h1>Rock Paper Scissors ✂️</h1>
+  <p class="subtitle">First to 3 wins!</p>
+
+  <div class="difficulty">
+  <button class="diff-btn active" id="diff-easy" onclick="setDifficulty('easy')">😊 Easy</button>
+  <button class="diff-btn" id="diff-medium" onclick="setDifficulty('medium')">😐 Medium</button>
+  <button class="diff-btn" id="diff-hard" onclick="setDifficulty('hard')">😈 Hard</button>
+</div>
+
+
+  <div class="scoreboard">
+    <div class="score-box">
+      <p class="score-label">You</p>
+      <p class="score-num" id="playerScore">0</p>
+    </div>
+    <div class="score-box">
+      <p class="score-label">Computer</p>
+      <p class="score-num" id="computerScore">0</p>
+    </div>
+  </div>
+
+
+  <div class="choices">
+    <button class="btn" onclick="play('Rock')">🪨 Rock</button>
+    <button class="btn" onclick="play('Paper')">📄 Paper</button>
+    <button class="btn" onclick="play('Scissors')">✂️ Scissors</button>
+  </div>
+
+
+  <div class="result-area">
+    <div class="picks">
+      <div class="pick-box">
+        <p class="pick-label">You picked</p>
+        <p class="pick-emoji" id="playerPick">❓</p>
+      </div>
+      <p class="vs">VS</p>
+      <div class="pick-box">
+        <p class="pick-label">CPU picked</p>
+        <p class="pick-emoji" id="cpuPick">❓</p>
+      </div>
+    </div>
+    <p class="result-msg" id="resultMsg">Make your move!</p>
+  </div>
+
+
+  <p class="round-info" id="roundInfo">Round 1</p>
+
+
+  <button class="reset-btn" onclick="resetGame()">🔄 Reset Game</button>
+
+  <div class="history-box">
+  <p class="history-title">📜 Last 5 Rounds</p>
+  <div id="historyList"><p class="no-history">No rounds yet</p></div>
+</div>
+
+
+  <div class="overlay" id="overlay">
+    <div class="popup">
+      <p class="popup-title" id="popupTitle">You Win! 🎉</p>
+      <p class="popup-score" id="popupScore">3 - 1</p>
+      <button class="popup-btn" onclick="resetGame()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
+
+
